@@ -49,7 +49,7 @@ def todo_change_button(request, pk):
         button.task_completed = True
     button.save()
 
-    return render(request, "todo/index.html")
+    return redirect("todo:todo-list")
 
 
 class TagListView(generic.ListView):
